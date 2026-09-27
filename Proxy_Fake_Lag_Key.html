@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proxy Fake Lag - Key</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{
+height:100vh;display:flex;justify-content:center;align-items:center;
+background:radial-gradient(circle at top,#4d0000,#050505);
+color:white;
+}
+.card{
+width:90%;max-width:400px;background:rgba(25,0,0,.95);
+padding:35px;border-radius:25px;text-align:center;
+box-shadow:0 0 35px red;border:1px solid #ff1a1a;
+}
+.logo{font-size:45px;margin-bottom:15px}
+h1{color:#ff3333;font-size:28px;margin-bottom:10px;text-shadow:0 0 10px red}
+p{color:#ccc;margin-bottom:25px}
+.key-box{
+background:#0d0000;border:2px dashed #ff3333;padding:18px;
+border-radius:15px;font-size:22px;letter-spacing:3px;
+margin-bottom:20px;color:#ff5555;
+}
+button{
+width:100%;padding:15px;border:none;border-radius:15px;
+background:#ff0000;color:white;font-size:18px;font-weight:bold;
+cursor:pointer;box-shadow:0 0 15px red;
+}
+button:hover{background:#ff4444}
+.status{margin-top:20px;font-size:14px;color:#00ff66;font-weight:bold}
+footer{margin-top:25px;font-size:12px;color:#777}
+</style>
+</head>
+<body>
+<div class="card">
+<div class="logo">🔑</div>
+<h1>Proxy Fake Lag</h1>
+<p>Sua Key está liberada</p>
+<div class="key-box" id="key">WZH4X20</div>
+<button onclick="copiarKey()">📋 Copiar Key</button>
+<div class="status" id="status">🟢 Key disponível</div>
+<footer>Sistema de acesso Proxy</footer>
+</div>
+
+<script>
+function copiarKey(){
+let key=document.getElementById("key").innerText;
+navigator.clipboard.writeText(key);
+document.getElementById("status").innerHTML="✅ Key copiada com sucesso!";
+}
+</script>
+</body>
+</html>
